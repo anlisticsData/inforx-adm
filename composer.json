@@ -1,0 +1,14 @@
+{
+    "name": "root/adm",
+    "description": "Administracao",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "app/"
+        }
+    },
+    "minimum-stability": "RC",
+    "require": {
+        "guzzlehttp/guzzle": "^7.0",
+        "twig/twig": "^3.0"
+    }
+}

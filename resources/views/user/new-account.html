@@ -1,0 +1,61 @@
+{{ include('/components/twig-html-header.html', sandboxed = true) }}
+
+<body class="bg03 animate__animated animate__bounceInRight">
+    <div class="container">
+        <div class="row tm-mt-big">
+            <div class="col-12 mx-auto tm-login-col">
+                <div class="bg-white tm-block">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img src="img/logo.png" alt="Logo" class="img-fluid tm-site-logo">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <form action="controllers/register" method="post" class="tm-login-form text-center">
+
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+                                <div class="input-group">
+                                    <label for="username" class="col-xl-5 col-lg-4 col-md-4 col-sm-5 col-form-label">{{ lang['username'] }}</label>
+                                    <input name="username" type="text" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" id="username" required>
+                                </div>
+                                <div class="input-group mt-3">
+                                    <label for="email" class="col-xl-5 col-lg-4 col-md-4 col-sm-5 col-form-label">{{ lang['email'] }}</label>
+                                    <input name="email" type="email" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" id="email" required>
+                                </div>
+                                <div class="input-group mt-3">
+                                    <label for="password" class="col-xl-5 col-lg-4 col-md-4 col-sm-5 col-form-label">{{ lang['password'] }}</label>
+                                    <input name="password" type="password" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" id="password" required>
+                                </div>
+                                <div class="input-group mt-3">
+                                    <label for="confirm_password" class="col-xl-5 col-lg-4 col-md-4 col-sm-5 col-form-label">{{ lang['confirm_password'] }}*</label>
+                                    <input name="confirm_password" type="password" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" id="confirm_password" required>
+                                </div>
+
+                                <!-- Botão de Voltar -->
+
+                                <div class="input-group mt-3">
+                                    <button type="submit" class="btn btn-primary w-100 rounded">{{ lang['create_account'] }}</button>
+                                </div>
+
+                                <div class="input-group mt-3">
+                                    <a href="index" class="btn btn-secondary w-100 rounded">{{ lang['back_to_login'] }}</a>
+                                </div>
+
+                                
+                                <div class="input-group mt-3">
+                                    <a href="index" class="btn btn-secondary w-100 rounded">{{ lang['already_have_account'] }}</a>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ include('/components/twig-html-footer.html', sandboxed = true) }}
+    </div>
+</body>
+
+</html>

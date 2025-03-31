@@ -1,0 +1,45 @@
+{{ include('/components/twig-html-header.html', sandboxed = true) }}
+
+<body class="bg03 animate__animated animate__bounceInRight ">
+    <div class="container">
+        <div class="row tm-mt-big">
+            <div class="col-12 mx-auto tm-login-col">
+                <div class="bg-white tm-block">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img src="img/logo.png" alt="Logo" class="img-fluid tm-site-logo">
+                          
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <form action="controllers/authentication" method="post" class="tm-login-form text-center">
+
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+                                <div class="input-group">
+                                    <label for="username" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">{{ lang['username'] }}</label>
+                                    <input name="username" type="text" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" id="username" value="admin" required>
+                                </div>
+                                <div class="input-group mt-3">
+                                    <label for="password" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">{{ lang['password'] }}</label>
+                                    <input name="password" type="password" class="form-control validate" id="password" value="1234" required>
+                                </div>
+                                <div class="input-group mt-3">
+                                    <button type="submit" class="btn btn-primary w-100 rounded">{{ lang['login'] }}</button>
+                                </div>
+                                <div class="input-group mt-3">
+                                    <a href="new-account" class="btn btn-secondary w-100 rounded">{{ lang['create_account'] }}</a>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ include('/components/twig-html-footer.html', sandboxed = true) }}
+    </div>
+</body>
+
+</html>
