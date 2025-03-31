@@ -1,5 +1,4 @@
 <?php
-
 namespace Core\Resources;
 use Core\Interfaces\ILanguage;
 use Exception;
@@ -11,7 +10,7 @@ class Language implements ILanguage{
     
     
 
-    
+
     
     private $languages = [
         'pt-br' => [
