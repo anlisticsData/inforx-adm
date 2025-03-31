@@ -1,0 +1,2 @@
+# inforx-adm
+Administrador
